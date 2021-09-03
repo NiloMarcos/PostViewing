@@ -35,4 +35,6 @@ export const Button = styled.button`
   font-size: 14px;
 `;
 
-export const ButtonNextScreen = styled.button``;
+export const ButtonNextScreen = styled.button`
+
+`;

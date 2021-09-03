@@ -4,10 +4,12 @@ import api from '../../services/api';
 import {ContainerAll, ContainerHistory, Button, ButtonNextScreen} from './style';
 
 export default function Home(){
+  const [posts, setPosts] = useState([]);
 
   async function handleShowMe(){
     const response = await api.get('/posts');
-    console.log(response.data);
+    setPosts(response.data);
+    console.log(posts)
   }
 
   return (
@@ -19,6 +21,14 @@ export default function Home(){
 
       <Button onClick={() => handleShowMe()}>Mostrar-me historias</Button>
 
+      {posts.map((item) => {
+        return (
+          <div key={item.id}>
+            <p>{item.title}</p>
+            <p>{item.body}</p>
+          </div>
+        );
+      })}
 
       <ButtonNextScreen>Ver Mais</ButtonNextScreen>
     </ContainerAll>
