@@ -16,7 +16,7 @@ export const ContainerHistory = styled.div`
   width: 770px;
   height: 60px;
   border-radius: 10px;
-  
+
   h3 {
     margin-left: 15px;
     color: #000;
@@ -34,3 +34,5 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 14px;
 `;
+
+export const ButtonNextScreen = styled.button``;

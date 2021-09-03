@@ -1,6 +1,6 @@
 import React from 'react';
 import {FiBookOpen} from 'react-icons/fi';
-import {ContainerAll, ContainerHistory, Button} from './style';
+import {ContainerAll, ContainerHistory, Button, ButtonNextScreen} from './style';
 
 export default function Home(){
 
@@ -17,6 +17,8 @@ export default function Home(){
 
       <Button onClick={() => handleShowMe()}>Mostrar-me historias</Button>
 
+
+      <ButtonNextScreen>Ver Mais</ButtonNextScreen>
     </ContainerAll>
   );
 }
