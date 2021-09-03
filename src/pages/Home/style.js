@@ -16,16 +16,21 @@ export const ContainerHistory = styled.div`
   width: 770px;
   height: 60px;
   border-radius: 10px;
-
+  
   h3 {
     margin-left: 15px;
     color: #000;
+  }
+
+  @media(max-width: 400px) {
+    width: 380px;
+    height: 60px;
   }
 `;
 
 export const Button = styled.button`
   width: 170px;
-  height: 40px;
+  height: 60px;
   margin-top: 30px;
   margin-left: 37rem;
   border: 0;
@@ -33,6 +38,11 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: bold;
   font-size: 14px;
+
+
+  @media(max-width: 400px) {
+    margin-left: 0;
+  }
 `;
 
 export const ContainerResponseApi = styled.div`
@@ -40,7 +50,7 @@ export const ContainerResponseApi = styled.div`
   margin: 10px;
   margin-top: 16px;
   width: 800px;
-  height: 120px;
+  height: 140px;
   border-radius: 10px;
 
   a {
@@ -48,6 +58,12 @@ export const ContainerResponseApi = styled.div`
     margin-left: 15px;
     color: #000;
     font-weight: bold;
+  }
+
+
+  @media(max-width: 400px) {
+    width: 380px;
+    height: 220px;
   }
 `;
 

@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {FiArrowLeft} from 'react-icons/fi';
 import {Link, useParams} from 'react-router-dom';
-import {ContainerAll, ContainerReadPost, BackContainer } from './style';
+import api from '../../services/api';
+import {ContainerAll, ContainerReadPost, BackContainer, ContainerInfoApi} from './style';
 
 export default function Posts() {
   const {id} = useParams();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function loadPosts(){
+      const response = await api.get(`/posts/${id}`)
+      console.log(response.data);
+      setPosts(response.data);
+
+    }
+    loadPosts();
+  },[id]);
 
   return (
     <ContainerAll>
@@ -16,9 +28,10 @@ export default function Posts() {
         <h3>Posts</h3>
       </ContainerReadPost>
 
-      <div>
-        <p>{id}</p>
-      </div>
+      <ContainerInfoApi>
+        <h3>{posts.title}</h3>
+        <p>{posts.body}</p>
+      </ContainerInfoApi>
     </ContainerAll>
   );
 }
