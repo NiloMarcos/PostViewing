@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
 import {ContainerAll, ContainerAlert} from './styles';
 
 export default function Erro(){
