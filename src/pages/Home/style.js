@@ -35,6 +35,29 @@ export const Button = styled.button`
   font-size: 14px;
 `;
 
-export const ButtonNextScreen = styled.button`
+export const ContainerResponseApi = styled.div`
+  background-color: white;
+  margin: 10px;
+  margin-top: 16px;
+  width: 800px;
+  height: 120px;
+  border-radius: 10px;
 
+  a {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #000;
+    font-weight: bold;
+  }
+`;
+
+export const TitleApi = styled.p`
+  text-align: center;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const DescriptionAip = styled.p`
+  padding-left: 6px;
 `;

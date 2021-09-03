@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import {FiBookOpen} from 'react-icons/fi';
 import api from '../../services/api';
-import {ContainerAll, ContainerHistory, Button, ButtonNextScreen} from './style';
+import {Link} from 'react-router-dom';
+import {ContainerAll, ContainerHistory, Button, ContainerResponseApi, TitleApi, DescriptionAip} from './style';
 
 export default function Home(){
   const [posts, setPosts] = useState([]);
@@ -23,14 +24,13 @@ export default function Home(){
 
       {posts.map((item) => {
         return (
-          <div key={item.id}>
-            <p>{item.title}</p>
-            <p>{item.body}</p>
-          </div>
+          <ContainerResponseApi key={item.id}>
+            <TitleApi>{item.title}</TitleApi>
+            <DescriptionAip>{item.body}</DescriptionAip>
+            <Link to="/posts">Ver Mais</Link>
+          </ContainerResponseApi>
         );
       })}
-
-      <ButtonNextScreen>Ver Mais</ButtonNextScreen>
     </ContainerAll>
   );
 }
