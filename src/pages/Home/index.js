@@ -27,7 +27,7 @@ export default function Home(){
           <ContainerResponseApi key={item.id}>
             <TitleApi>{item.title}</TitleApi>
             <DescriptionAip>{item.body}</DescriptionAip>
-            <Link to="/posts">Ver Mais</Link>
+            <Link to={`/posts/${item.id}`}>Ver Mais</Link>
           </ContainerResponseApi>
         );
       })}
