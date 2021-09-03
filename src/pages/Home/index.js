@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {FiBookOpen} from 'react-icons/fi';
+import api from '../../services/api';
 import {ContainerAll, ContainerHistory, Button, ButtonNextScreen} from './style';
 
 export default function Home(){
 
-  function handleShowMe(){
-    alert('Click')
+  async function handleShowMe(){
+    const response = await api.get('/posts');
+    console.log(response.data);
   }
 
   return (
